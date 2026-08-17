@@ -4,34 +4,104 @@
 <head>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Doce Arte | Confeitaria Artesanal</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <link rel="stylesheet" href="style.css">
+    <meta
+        name="description"
+        content="Doce Arte por Julia Berta. Confeitaria artesanal criada para transformar criatividade, cuidado e sabor em experiências."
+    >
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Doce Arte | Julia Berta</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- FAVICON -->
+
+    <link
+        rel="icon"
+        type="image/png"
+        href="./img/favicon.png"
+    >
+
+
+    <!-- FONTES -->
+
+    <link
+        rel="preconnect"
+        href="https://fonts.googleapis.com"
+    >
+
+    <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <!-- CSS -->
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
 
 </head>
 
+
 <body>
+
+
+<!-- ==================================================
+     NAVBAR
+================================================== -->
 
 <header>
 
     <nav class="navbar">
 
-        <img src="img/logo.png" class="logo">
 
-        <ul>
+        <button
+            class="menu-toggle"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+        >
+            ☰
+        </button>
 
-            <li><a href="#">Início</a></li>
-            <li><a href="#">Sobre</a></li>
-            <li><a href="#">Galeria</a></li>
-            <li><a href="#">Encomendas</a></li>
-            <li><a href="#">Contato</a></li>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#inicio">Início</a>
+            </li>
+
+            <li>
+                <a href="#sobre">Sobre mim</a>
+            </li>
+
+            <li>
+                <a href="#criacao">Minhas criações</a>
+            </li>
+
+            <li>
+                <a href="#arte">A arte</a>
+            </li>
+
+            <li>
+                <a href="#cardapio">Cardápio</a>
+            </li>
+
+            <li>
+                <a href="#encomendas">Encomendas</a>
+            </li>
 
         </ul>
 
@@ -39,28 +109,1018 @@
 
 </header>
 
-<section class="hero">
+
+
+<main>
+
+
+<!-- ==================================================
+     HOME
+================================================== -->
+
+<section
+    id="inicio"
+    class="hero"
+>
+
+
+    <div class="hero-decoration"></div>
+
+
+    <!-- TEXTO -->
 
     <div class="hero-content">
 
-        <h1>Doce Arte</h1>
 
-        <h2>Confeitaria Artesanal</h2>
+        <span class="eyebrow">
+            Confeitaria autoral
+        </span>
+
+
+        <h1>
+
+            Doce
+
+            <span>
+                Arte
+            </span>
+
+        </h1>
+
+
+        <div class="artist-name">
+
+            <span>
+                por
+            </span>
+
+            <strong id="typing"></strong>
+
+        </div>
+
 
         <p>
-            Cada bolo é criado com cuidado, ingredientes selecionados e muito carinho,
-            transformando celebrações em momentos inesquecíveis.
+
+            Onde criatividade, delicadeza e sabor
+            se encontram para transformar doces
+            em experiências.
+
         </p>
 
-        <a href="#" class="btn">
-            Fazer Encomenda
+
+        <a
+            href="#criacao"
+            class="btn"
+        >
+
+            Conhecer minhas criações
+
         </a>
+
+
+    </div>
+
+
+
+    <!-- FOTO -->
+
+    <div class="hero-image">
+
+
+        <div class="hero-photo-frame">
+
+
+            <img
+                src="img/doce-08.jpeg"
+                alt="Criação artesanal da Doce Arte"
+            >
+
+
+        </div>
+
+
+        <div class="hero-photo-decoration"></div>
+
+
+        <span class="hero-caption">
+
+            feito à mão · feito com arte
+
+        </span>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     SOBRE
+================================================== -->
+
+<section
+    id="sobre"
+    class="sobre"
+>
+
+
+    <div class="section-number">
+        01
+    </div>
+
+
+    <div class="sobre-container">
+
+
+        <!-- TÍTULO -->
+
+        <div class="sobre-heading">
+
+
+            <span class="eyebrow">
+                quem está por trás
+            </span>
+
+
+            <h2>
+
+                Eu encontrei
+                <br>
+
+                minha arte
+                <br>
+
+                <em>na confeitaria.</em>
+
+            </h2>
+
+
+            <div class="assinatura">
+
+                Julia Berta
+
+                <img
+                    src="img/onca.png"
+                    alt="Onça símbolo da Doce Arte"
+                    class="onca-assinatura"
+                >
+
+            </div>
+
+
+        </div>
+
+
+
+        <!-- HISTÓRIA -->
+
+        <div class="sobre-text">
+
+
+            <p class="sobre-intro">
+
+                A Doce Arte surgiu da frustração
+                da minha tentativa de trabalhar
+                com a arte de uma forma que me
+                falaram ser a única maneira de
+                ganhar dinheiro.
+
+            </p>
+
+
+            <p>
+
+                Até porque arte não é valorizada
+                no nosso país.
+
+            </p>
+
+
+            <p>
+
+                A tatuagem me moldou para criar
+                arte que coubesse na caixa:
+                vender. Criar para vender.
+                Criar para ser comercializado.
+
+            </p>
+
+
+            <p>
+
+                Quando isso nunca me foi atrativo
+                aos olhos e nem à minha essência,
+                comecei a perceber que precisava
+                encontrar outro caminho.
+
+            </p>
+
+
+            <p>
+
+                Quando olhava para a tatuagem,
+                me vinha angústia e comparação.
+
+                Foi aí que me encontrei na
+                confeitaria.
+
+            </p>
+
+
+            <p>
+
+                Sempre gostei muito de cozinhar,
+                mas não salgado. Doce!
+
+                Acho que tenho uma gama maior
+                de opções de criação, de soltar
+                a criatividade e fazer o que faço
+                de melhor sem comparação e sem
+                me atropelar.
+
+            </p>
+
+
+            <p class="quote">
+
+                “A confeitaria é isso: respeitar
+                os processos para alcançar um
+                bom resultado. E ter delicadeza,
+                cuidado, mas também ter a manha.”
+
+            </p>
+
+
+        </div>
+
+
+    </div>
+
+
+
+    <!-- CONTINUAÇÃO -->
+
+    <div class="sobre-continuacao">
+
+
+        <div class="continuacao-text">
+
+
+            <span class="eyebrow">
+                uma história que começou na cozinha
+            </span>
+
+
+            <h3>
+                Cresci em cozinha.
+            </h3>
+
+
+            <p>
+
+                Meus pais têm uma panificadora
+                e eu sempre gostei de pôr a mão
+                na massa.
+
+            </p>
+
+
+            <p>
+
+                E juntando tudo isso, me inscrevi
+                no curso de Confeitaria de seis
+                meses do SENAC.
+
+            </p>
+
+
+            <p>
+
+                Lá eu consegui me apaixonar mesmo.
+                Foi uma trajetória muito linda,
+                na qual consegui me aperfeiçoar
+                e conhecer pessoas que vou levar
+                para o resto da vida.
+
+            </p>
+
+
+        </div>
+
+
+
+        <!-- FRASE DE IMPACTO -->
+
+        <div class="paixao">
+
+
+            <span>
+                e então...
+            </span>
+
+
+            <strong>
+
+                acendeu uma coisa
+                no meu peito
+
+            </strong>
+
+
+            <em>
+
+                que eu não sentia na tatuagem:
+                paixão.
+
+            </em>
+
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     MANIFESTO
+================================================== -->
+
+<section class="manifesto">
+
+    <!-- ONÇA DA IDENTIDADE -->
+    <img
+        src="img/onca.png"
+        alt=""
+        class="onca-manifesto"
+        aria-hidden="true"
+    >
+
+    <div class="manifesto-content">
+
+        <span class="eyebrow">
+            o nascimento da Doce Arte
+        </span>
+
+        <h2>
+            criar sem caber
+            <br>
+            em uma
+            <em>caixa.</em>
+        </h2>
+
+        <p>
+            A Doce Arte nasceu para que a
+            criatividade pudesse voltar a ser
+            liberdade.
+        </p>
+
+        <p>
+            Sem comparação. Sem atropelar
+            processos. Sem criar apenas para
+            caber no que é comercial.
+        </p>
 
     </div>
 
 </section>
 
+
+
+<!-- ==================================================
+     MINHAS CRIAÇÕES
+================================================== -->
+
+<section
+    id="criacao"
+    class="criacao"
+>
+
+
+    <div class="section-number">
+        02
+    </div>
+
+
+    <div class="criacao-header">
+
+
+        <div>
+
+
+            <span class="eyebrow">
+                criação autoral
+            </span>
+
+
+            <h2>
+
+                Minhas
+                <br>
+
+                <em>criações.</em>
+
+            </h2>
+
+
+        </div>
+
+
+        <p>
+
+            Cada doce é pensado, produzido e
+            finalizado por mim, com liberdade
+            para experimentar sabores, formas,
+            texturas e detalhes.
+
+        </p>
+
+
+    </div>
+
+
+
+    <!-- CARROSSEL -->
+
+    <div class="carousel-wrapper">
+
+
+        <button
+            class="carousel-btn prev"
+            aria-label="Criação anterior"
+        >
+            ←
+        </button>
+
+
+        <div class="carousel">
+
+
+            <div class="carousel-track">
+
+
+                <div class="carousel-item">
+                    <img src="img/doce-01.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-02.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-03.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-04.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-05.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-06.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-07.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-08.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-09.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-10.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-11.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-12.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-13.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-14.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-15.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-16.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-17.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-18.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-19.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-20.jpeg" alt="Criação Doce Arte">
+                </div>
+
+                <div class="carousel-item">
+                    <img src="img/doce-21.jpeg" alt="Criação Doce Arte">
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <button
+            class="carousel-btn next"
+            aria-label="Próxima criação"
+        >
+            →
+        </button>
+
+
+    </div>
+
+
+
+    <div class="carousel-counter">
+
+        <span id="current-slide">
+            01
+        </span>
+
+        <span class="counter-line"></span>
+
+        <span>
+            21
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     A ARTE
+================================================== -->
+
+<section
+    id="arte"
+    class="arte"
+>
+
+
+    <div class="arte-content">
+
+
+        <span class="eyebrow">
+            o jeito Doce Arte de criar
+        </span>
+
+
+        <h2>
+
+            Delicadeza,
+            <br>
+
+            cuidado e
+            <br>
+
+            <em>manha.</em>
+
+        </h2>
+
+
+        <div class="arte-symbol">
+            ✦
+        </div>
+
+
+        <p>
+
+            A confeitaria me ensinou que criar
+            também é respeitar processos.
+
+        </p>
+
+
+        <p>
+
+            É saber esperar, testar, errar,
+            tentar de novo e confiar nas mãos.
+
+        </p>
+
+
+        <p>
+
+            É ter delicadeza e cuidado, mas
+            também ter a manha — aquele olhar
+            que nasce da prática, da experiência
+            e da paixão pelo que se faz.
+
+        </p>
+
+
+        <strong>
+
+            Cada detalhe tem um propósito.
+            Cada criação tem uma história.
+
+        </strong>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     CARDÁPIO
+================================================== -->
+
+<section
+    id="cardapio"
+    class="cardapio"
+>
+
+
+    <div class="cardapio-inner">
+
+
+        <div>
+
+
+            <span class="eyebrow">
+                sabores & opções
+            </span>
+
+
+            <h2>
+
+                Conheça o
+                <em>cardápio.</em>
+
+            </h2>
+
+
+            <p>
+
+                Descubra as opções disponíveis
+                e encontre o doce perfeito para
+                o seu momento.
+
+            </p>
+
+
+        </div>
+
+
+        <a
+            href="https://canva.link/gd2k5ioov3qtzpl"
+            class="btn"
+        >
+
+            ver cardápio
+
+        </a>
+
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ==================================================
+     ENCOMENDAS
+================================================== -->
+
+<section
+    id="encomendas"
+    class="encomendas"
+>
+
+
+    <div class="section-number">
+        03
+    </div>
+
+
+    <div class="encomendas-content">
+
+
+        <span class="eyebrow">
+            vamos criar algo especial?
+        </span>
+
+
+        <h2>
+
+            Sua comemoração
+            <br>
+
+            merece uma
+            <em>Doce Arte.</em>
+
+        </h2>
+
+
+        <p>
+
+            Para fazer sua encomenda, escolha
+            uma das opções abaixo. Vai ser um
+            prazer transformar sua ideia em algo
+            ainda mais especial.
+
+        </p>
+
+
+
+        <!-- CONTATOS -->
+
+        <div class="contact-options">
+
+
+            <!-- WHATSAPP -->
+
+            <a
+                href="https://wa.me/41997399957"
+                class="contact-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="contact-icon">
+                    <span>⌕</span>
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        WhatsApp
+                    </strong>
+
+                    <span>
+                        fale comigo
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- INSTAGRAM -->
+
+            <a
+                href="https://www.instagram.com/doceartejuliarberta?igsh=MTk0MTBud2hheXA5Zg=="
+                class="contact-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="contact-icon">
+                    ◎
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Instagram
+                    </strong>
+
+                    <span>
+                        acompanhe meu trabalho
+                    </span>
+
+                </div>
+
+            </a>
+
+
+
+            <!-- FORMULÁRIO -->
+
+            <a
+                href="https://forms.gle/VAnRfksHNHhoEBVGA"
+                class="contact-card"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+
+                <div class="contact-icon">
+                    ✎
+                </div>
+
+
+                <div>
+
+                    <strong>
+                        Formulário
+                    </strong>
+
+                    <span>
+                        solicite sua encomenda
+                    </span>
+
+                </div>
+
+            </a>
+
+
+        </div>
+
+
+
+        <!-- ORIENTAÇÕES -->
+
+        <div class="order-info">
+
+
+            <div class="info-item">
+
+                <span>
+                    confirmação
+                </span>
+
+                <p>
+
+                    A confirmação do pedido é feita
+                    mediante pagamento de um sinal
+                    antecipado, que será descontado
+                    do valor total da encomenda.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    pagamento
+                </span>
+
+                <p>
+
+                    Aceitamos Pix, dinheiro e
+                    cartão de débito ou crédito.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    entrega
+                </span>
+
+                <p>
+
+                    Caso precise de entrega, informe
+                    o endereço para que a taxa seja
+                    calculada.
+
+                </p>
+
+            </div>
+
+
+            <div class="info-item">
+
+                <span>
+                    retirada
+                </span>
+
+                <p>
+
+                    Caso opte pela retirada, o endereço
+                    será enviado após a confirmação
+                    do pedido.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+
+        <div class="pickup-note">
+
+            <strong>
+                atenção
+            </strong>
+
+            <p>
+
+                Informe se sua encomenda será para
+                entrega ou retirada, juntamente com
+                o horário desejado.
+
+            </p>
+
+
+            <p>
+
+                Para retiradas aos domingos,
+                o horário é até 12h.
+
+            </p>
+
+        </div>
+
+
+
+        <div class="instagram-permission">
+
+            <p>
+
+                No momento da encomenda,
+                você poderá informar se autoriza
+                a Doce Arte a postar e marcar
+                sua criação no Instagram.
+
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+</section>
+
+
+</main>
+
+
+
+<!-- ==================================================
+     FOOTER
+================================================== -->
+
+<footer>
+
+
+    <div class="footer-logo">
+        Doce Arte
+    </div>
+
+
+    <p>
+        Criações artesanais por Julia Berta
+    </p>
+
+
+    <div class="footer-line"></div>
+
+
+    <small>
+        © 2026 Doce Arte · Todos os direitos reservados
+    </small>
+
+
+</footer>
+
+
+
 <script src="script.js"></script>
 
 </body>
+
 </html>
