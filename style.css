@@ -14,8 +14,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    background: #122b01;
-    color: #122b01;
+    background: var(--verde);
+    color: var(--verde);
     overflow-x: hidden;
 }
 
@@ -47,7 +47,6 @@ img {
 ================================================== */
 
 :root {
-
     --verde: #122b01;
     --verde-escuro: #122b01;
     --verde-medio: #122b01;
@@ -64,7 +63,6 @@ img {
     --cinza-claro: #756012;
 
     --sombra: 0 25px 60px rgba(19, 38, 30, .14);
-
 }
 
 
@@ -103,81 +101,53 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-
     width: 100%;
-
     z-index: 1000;
 }
 
 .navbar {
     position: relative;
-
     width: 100%;
     min-height: 88px;
-
     padding: 12px 7%;
 
     display: flex;
     align-items: center;
+    justify-content: center;
 
     background: #122b01;
-
     backdrop-filter: blur(12px);
 
     border-bottom: 1px solid rgba(200, 161, 77, .15);
 }
 
 
-/* links realmente centralizados */
-.nav-links {
-    position: absolute;
-
-    left: 50%;
-    top: 50%;
-
-    transform: translate(-50%, -50%);
-
-    display: flex;
-    align-items: center;
-
-    gap: 32px;
-}
-
-
-/* LINKS */
+/* ==================================================
+   LINKS DESKTOP
+================================================== */
 
 .nav-links {
-
     display: flex;
-
     align-items: center;
-
     gap: 32px;
-
 }
 
 .nav-links a {
-
     position: relative;
 
     color: white;
 
     font-size: 13px;
-
     font-weight: 400;
-
     letter-spacing: .7px;
 
     transition: .3s ease;
-
 }
 
 .nav-links a::after {
-
     content: '';
 
     position: absolute;
-
     left: 0;
     bottom: -7px;
 
@@ -187,7 +157,6 @@ header {
     background: var(--dourado);
 
     transition: .3s ease;
-
 }
 
 .nav-links a:hover {
@@ -199,16 +168,19 @@ header {
 }
 
 
-/* MENU MOBILE */
+/* ==================================================
+   BOTÃO MENU MOBILE
+================================================== */
 
 .menu-toggle {
-
     display: none;
+
+    position: relative;
 
     width: 45px;
     height: 45px;
 
-    border: 1px solid rgba(255,255,255,.3);
+    border: 1px solid rgba(255, 255, 255, .35);
 
     background: transparent;
 
@@ -220,8 +192,17 @@ header {
 
     border-radius: 50%;
 
-    z-index: 1001;
+    z-index: 1100;
 
+    align-items: center;
+    justify-content: center;
+
+    transition: .3s ease;
+}
+
+.menu-toggle:hover {
+    background: var(--dourado);
+    border-color: var(--dourado);
 }
 
 
@@ -230,7 +211,6 @@ header {
 ================================================== */
 
 .eyebrow {
-
     display: block;
 
     color: var(--dourado);
@@ -244,11 +224,9 @@ header {
     font-weight: 500;
 
     margin-bottom: 20px;
-
 }
 
 .section-number {
-
     position: absolute;
 
     top: 70px;
@@ -261,11 +239,9 @@ header {
     font-size: 14px;
 
     letter-spacing: 2px;
-
 }
 
 .btn {
-
     display: inline-flex;
 
     align-items: center;
@@ -289,18 +265,15 @@ header {
 
     transition: .35s ease;
 
-    box-shadow: 0 10px 25px rgba(200,161,77,.18);
-
+    box-shadow: 0 10px 25px rgba(200, 161, 77, .18);
 }
 
 .btn:hover {
-
-    background: #122b01;
+    background: var(--verde);
 
     transform: translateY(-4px);
 
-    box-shadow: 0 15px 30px rgba(200,161,77,.25);
-
+    box-shadow: 0 15px 30px rgba(200, 161, 77, .25);
 }
 
 
@@ -309,7 +282,6 @@ header {
 ================================================== */
 
 .hero {
-
     min-height: 100vh;
 
     position: relative;
@@ -325,30 +297,26 @@ header {
     gap: 60px;
 
     padding: 125px 10% 80px;
-
 }
 
 
 /* DECORAÇÃO */
 
 .hero-decoration {
-
     position: absolute;
 
     width: 520px;
     height: 520px;
 
-    border: 1px solid rgba(200,161,77,.18);
+    border: 1px solid rgba(200, 161, 77, .18);
 
     border-radius: 50%;
 
     right: -170px;
     top: 100px;
-
 }
 
 .hero-decoration::before {
-
     content: '';
 
     position: absolute;
@@ -356,20 +324,18 @@ header {
     width: 350px;
     height: 350px;
 
-    border: 1px solid rgba(200,161,77,.12);
+    border: 1px solid rgba(200, 161, 77, .12);
 
     border-radius: 50%;
 
     top: 85px;
     left: 85px;
-
 }
 
 
 /* HERO TEXTO */
 
 .hero-content {
-
     position: relative;
 
     z-index: 2;
@@ -377,11 +343,9 @@ header {
     max-width: 610px;
 
     animation: heroText .9s ease forwards;
-
 }
 
 .hero h1 {
-
     color: white;
 
     font-family: 'DM Serif Display', serif;
@@ -395,22 +359,17 @@ header {
     letter-spacing: -3px;
 
     margin-bottom: 20px;
-
 }
 
 .hero h1 span {
-
     display: block;
 
     color: var(--dourado);
 
     font-style: italic;
-
 }
 
-
 .artist-name {
-
     display: flex;
 
     align-items: center;
@@ -419,18 +378,16 @@ header {
 
     margin-bottom: 28px;
 
-    color: rgba(255,255,255,.7);
+    color: rgba(255, 255, 255, .7);
 
     font-size: 13px;
 
     letter-spacing: 2px;
 
     text-transform: uppercase;
-
 }
 
 .artist-name strong {
-
     color: white;
 
     font-family: 'Playfair Display', serif;
@@ -444,11 +401,9 @@ header {
     letter-spacing: 1px;
 
     min-width: 110px;
-
 }
 
 .artist-name strong::after {
-
     content: '|';
 
     color: var(--dourado);
@@ -456,28 +411,24 @@ header {
     animation: blink .8s infinite;
 
     margin-left: 3px;
-
 }
 
 .hero-content > p {
-
     max-width: 530px;
 
-    color: rgba(255,255,255,.75);
+    color: rgba(255, 255, 255, .75);
 
     font-size: 15px;
 
     line-height: 1.9;
 
     margin-bottom: 36px;
-
 }
 
 
 /* HERO FOTO */
 
 .hero-image {
-
     position: relative;
 
     width: 100%;
@@ -489,18 +440,9 @@ header {
     z-index: 2;
 
     animation: heroImage 1s ease forwards;
-
 }
 
-
-/*
-   AQUI está a correção da foto do Home.
-   Ela fica presa à coluna direita e não
-   empurra o conteúdo para baixo.
-*/
-
 .hero-photo-frame {
-
     position: relative;
 
     width: 100%;
@@ -513,18 +455,16 @@ header {
 
     border-radius: 230px 230px 25px 25px;
 
-    border: 1px solid rgba(200,161,77,.6);
+    border: 1px solid rgba(200, 161, 77, .6);
 
     padding: 10px;
 
-    background: rgba(255,255,255,.04);
+    background: rgba(255, 255, 255, .04);
 
-    box-shadow: 0 30px 70px rgba(0,0,0,.25);
-
+    box-shadow: 0 30px 70px rgba(0, 0, 0, .25);
 }
 
 .hero-photo-frame img {
-
     width: 100%;
     height: 100%;
 
@@ -533,12 +473,9 @@ header {
     object-position: center;
 
     border-radius: 215px 215px 18px 18px;
-
 }
 
-
 .hero-photo-decoration {
-
     position: absolute;
 
     width: 120px;
@@ -552,29 +489,24 @@ header {
     bottom: 30px;
 
     opacity: .5;
-
 }
 
 .hero-caption {
-
     position: absolute;
 
     bottom: -32px;
     left: 15px;
 
-    color: rgba(255,255,255,.55);
+    color: rgba(255, 255, 255, .55);
 
     font-size: 9px;
 
     letter-spacing: 2px;
 
     text-transform: uppercase;
-
 }
 
-
 .hero-scroll {
-
     position: absolute;
 
     bottom: 28px;
@@ -582,7 +514,7 @@ header {
 
     transform: translateX(-50%);
 
-    color: rgba(255,255,255,.45);
+    color: rgba(255, 255, 255, .45);
 
     font-size: 9px;
 
@@ -595,17 +527,14 @@ header {
     align-items: center;
 
     gap: 10px;
-
 }
 
 .hero-scroll span {
-
     color: var(--dourado);
 
     font-size: 17px;
 
     animation: scrollDown 1.5s infinite;
-
 }
 
 
@@ -614,7 +543,6 @@ header {
 ================================================== */
 
 .sobre {
-
     position: relative;
 
     background: var(--creme);
@@ -622,11 +550,9 @@ header {
     padding: 140px 10% 120px;
 
     overflow: hidden;
-
 }
 
 .sobre::before {
-
     content: '';
 
     position: absolute;
@@ -636,15 +562,13 @@ header {
 
     border-radius: 50%;
 
-    border: 1px solid rgba(29,58,47,.08);
+    border: 1px solid rgba(29, 58, 47, .08);
 
     left: -200px;
     bottom: -180px;
-
 }
 
 .sobre-container {
-
     max-width: 1180px;
 
     margin: auto;
@@ -654,11 +578,9 @@ header {
     grid-template-columns: .85fr 1.15fr;
 
     gap: 100px;
-
 }
 
 .sobre-heading h2 {
-
     color: var(--verde);
 
     font-family: 'DM Serif Display', serif;
@@ -670,26 +592,19 @@ header {
     font-weight: 400;
 
     letter-spacing: -2px;
-
 }
 
 .sobre-heading h2 em {
-
     color: var(--dourado);
 
     font-style: italic;
-
 }
 
-
 .sobre-text {
-
     padding-top: 10px;
-
 }
 
 .sobre-text p {
-
     color: #65655F;
 
     font-size: 14px;
@@ -697,11 +612,9 @@ header {
     line-height: 2;
 
     margin-bottom: 20px;
-
 }
 
 .sobre-text .sobre-intro {
-
     color: var(--verde);
 
     font-family: 'Playfair Display', serif;
@@ -711,11 +624,9 @@ header {
     line-height: 1.5;
 
     margin-bottom: 30px;
-
 }
 
 .quote {
-
     border-left: 2px solid var(--dourado);
 
     padding-left: 25px;
@@ -729,7 +640,6 @@ header {
     font-style: italic;
 
     margin-top: 35px;
-
 }
 
 
@@ -738,7 +648,6 @@ header {
 ================================================== */
 
 .assinatura {
-
     margin-top: 20px;
 
     display: flex;
@@ -758,11 +667,9 @@ header {
     font-size: 70px;
 
     line-height: 1.2;
-
 }
 
 .onca-assinatura {
-
     width: 250px;
     height: 250px;
 
@@ -775,31 +682,29 @@ header {
     transition:
         transform .4s ease,
         opacity .4s ease;
-
 }
 
-/* pequeno movimento ao passar o mouse */
-
 .assinatura:hover .onca-assinatura {
-
     transform:
         translateY(-3px)
         rotate(-4deg);
 
     opacity: 1;
-
 }
-/* CONTINUAÇÃO */
+
+
+/* ==================================================
+   CONTINUAÇÃO
+================================================== */
 
 .sobre-continuacao {
-
     max-width: 1180px;
 
     margin: 120px auto 0;
 
     padding-top: 80px;
 
-    border-top: 1px solid rgba(29,58,47,.12);
+    border-top: 1px solid rgba(29, 58, 47, .12);
 
     display: grid;
 
@@ -808,11 +713,9 @@ header {
     gap: 100px;
 
     align-items: center;
-
 }
 
 .continuacao-text h3 {
-
     font-family: 'DM Serif Display', serif;
 
     color: var(--verde);
@@ -822,11 +725,9 @@ header {
     font-weight: 400;
 
     margin-bottom: 25px;
-
 }
 
 .continuacao-text p {
-
     color: #65655F;
 
     font-size: 14px;
@@ -834,11 +735,9 @@ header {
     line-height: 2;
 
     margin-bottom: 20px;
-
 }
 
 .paixao {
-
     min-height: 330px;
 
     background: var(--verde);
@@ -856,11 +755,9 @@ header {
     position: relative;
 
     overflow: hidden;
-
 }
 
 .paixao::after {
-
     content: '✦';
 
     position: absolute;
@@ -873,11 +770,9 @@ header {
     color: var(--dourado);
 
     opacity: .12;
-
 }
 
 .paixao span {
-
     color: var(--dourado);
 
     font-size: 11px;
@@ -887,11 +782,9 @@ header {
     text-transform: uppercase;
 
     margin-bottom: 18px;
-
 }
 
 .paixao strong {
-
     font-family: 'DM Serif Display', serif;
 
     font-size: 42px;
@@ -899,11 +792,9 @@ header {
     line-height: 1.05;
 
     font-weight: 400;
-
 }
 
 .paixao em {
-
     color: var(--dourado);
 
     font-family: 'Playfair Display', serif;
@@ -913,7 +804,6 @@ header {
     line-height: 1.6;
 
     margin-top: 20px;
-
 }
 
 
@@ -922,7 +812,6 @@ header {
 ================================================== */
 
 .manifesto {
-
     min-height: 65vh;
 
     background: var(--verde);
@@ -940,36 +829,30 @@ header {
     position: relative;
 
     overflow: hidden;
-
 }
 
 .manifesto::before {
-
     content: '✦';
 
     position: absolute;
 
     font-size: 400px;
 
-    color: rgba(200,161,77,.04);
+    color: rgba(200, 161, 77, .04);
 
     right: -80px;
     bottom: -160px;
-
 }
 
 .manifesto-content {
-
     max-width: 800px;
 
     position: relative;
 
     z-index: 2;
-
 }
 
 .manifesto h2 {
-
     color: white;
 
     font-family: 'DM Serif Display', serif;
@@ -981,20 +864,16 @@ header {
     line-height: .98;
 
     letter-spacing: -2px;
-
 }
 
 .manifesto h2 em {
-
     color: var(--dourado);
 
     font-style: italic;
-
 }
 
 .manifesto p {
-
-    color: rgba(255,255,255,.65);
+    color: rgba(255, 255, 255, .65);
 
     max-width: 580px;
 
@@ -1003,15 +882,14 @@ header {
     line-height: 1.9;
 
     font-size: 14px;
-
 }
 
+
 /* ==================================================
-   ONÇA — IDENTIDADE DA DOCE ARTE
+   ONÇA — MANIFESTO
 ================================================== */
 
 .onca-manifesto {
-
     position: absolute;
 
     width: 340px;
@@ -1032,29 +910,23 @@ header {
         transform .6s ease,
         opacity .6s ease;
 
-    /*
-        caso a imagem da onça tenha fundo branco,
-        isso ajuda a integrar melhor.
-    */
     mix-blend-mode: screen;
 }
 
 .manifesto:hover .onca-manifesto {
-
     opacity: .22;
 
     transform:
         rotate(-3deg)
         scale(1.04);
-
 }
+
 
 /* ==================================================
    CRIAÇÕES
 ================================================== */
 
 .criacao {
-
     position: relative;
 
     padding: 140px 7% 120px;
@@ -1062,11 +934,9 @@ header {
     background: #EEEAE1;
 
     overflow: hidden;
-
 }
 
 .criacao-header {
-
     max-width: 1180px;
 
     margin: auto;
@@ -1080,11 +950,9 @@ header {
     align-items: end;
 
     margin-bottom: 60px;
-
 }
 
 .criacao-header h2 {
-
     color: var(--verde);
 
     font-family: 'DM Serif Display', serif;
@@ -1094,32 +962,28 @@ header {
     font-weight: 400;
 
     line-height: .9;
-
 }
 
 .criacao-header h2 em {
-
     color: var(--dourado);
 
     font-style: italic;
-
 }
 
 .criacao-header > p {
-
     color: var(--cinza);
 
     line-height: 1.9;
 
     font-size: 14px;
-
 }
 
 
-/* CARROSSEL */
+/* ==================================================
+   CARROSSEL
+================================================== */
 
 .carousel-wrapper {
-
     max-width: 1280px;
 
     margin: auto;
@@ -1129,29 +993,25 @@ header {
     align-items: center;
 
     gap: 20px;
-
 }
 
 .carousel {
-
     overflow: hidden;
 
     width: 100%;
-
 }
 
 .carousel-track {
-
     display: flex;
 
     gap: 20px;
 
-    transition: transform .6s cubic-bezier(.77,0,.18,1);
+    transition: transform .6s cubic-bezier(.77, 0, .18, 1);
 
+    will-change: transform;
 }
 
 .carousel-item {
-
     flex: 0 0 calc(33.333% - 14px);
 
     aspect-ratio: 4 / 5;
@@ -1159,31 +1019,27 @@ header {
     overflow: hidden;
 
     background: var(--verde);
-
 }
 
 .carousel-item img {
-
     width: 100%;
     height: 100%;
 
     object-fit: cover;
 
     transition: transform .7s ease;
-
 }
 
 .carousel-item:hover img {
-
     transform: scale(1.05);
-
 }
 
 
-/* BOTÕES */
+/* ==================================================
+   BOTÕES CARROSSEL
+================================================== */
 
 .carousel-btn {
-
     flex-shrink: 0;
 
     width: 48px;
@@ -1202,22 +1058,24 @@ header {
     font-size: 20px;
 
     transition: .3s ease;
-
 }
 
 .carousel-btn:hover {
-
     background: var(--verde);
 
     color: white;
+}
 
+.carousel-btn:disabled {
+    cursor: default;
 }
 
 
-/* CONTADOR */
+/* ==================================================
+   CONTADOR
+================================================== */
 
 .carousel-counter {
-
     max-width: 1280px;
 
     margin: 35px auto 0;
@@ -1233,17 +1091,14 @@ header {
     color: var(--verde);
 
     font-size: 13px;
-
 }
 
 .counter-line {
-
     width: 100px;
 
     height: 1px;
 
     background: var(--dourado);
-
 }
 
 
@@ -1252,17 +1107,14 @@ header {
 ================================================== */
 
 .arte {
-
     min-height: 90vh;
 
     background:
-
         radial-gradient(
             circle at 20% 80%,
-            rgba(200,161,77,.09),
+            rgba(200, 161, 77, .09),
             transparent 30%
         ),
-
         var(--verde-escuro);
 
     color: white;
@@ -1280,11 +1132,9 @@ header {
     position: relative;
 
     overflow: hidden;
-
 }
 
 .arte::before {
-
     content: '';
 
     position: absolute;
@@ -1292,27 +1142,23 @@ header {
     width: 650px;
     height: 650px;
 
-    border: 1px solid rgba(200,161,77,.1);
+    border: 1px solid rgba(200, 161, 77, .1);
 
     border-radius: 50%;
 
     left: -300px;
     bottom: -300px;
-
 }
 
 .arte-content {
-
     max-width: 720px;
 
     position: relative;
 
     z-index: 2;
-
 }
 
 .arte h2 {
-
     font-family: 'DM Serif Display', serif;
 
     font-weight: 400;
@@ -1322,41 +1168,33 @@ header {
     line-height: .95;
 
     letter-spacing: -2px;
-
 }
 
 .arte h2 em {
-
     color: var(--dourado);
 
     font-style: italic;
-
 }
 
 .arte-symbol {
-
     color: var(--dourado);
 
     font-size: 25px;
 
     margin: 35px 0;
-
 }
 
 .arte p {
-
-    color: rgba(255,255,255,.68);
+    color: rgba(255, 255, 255, .68);
 
     font-size: 14px;
 
     line-height: 2;
 
     margin-bottom: 18px;
-
 }
 
 .arte strong {
-
     display: block;
 
     color: var(--dourado);
@@ -1370,7 +1208,6 @@ header {
     font-weight: 400;
 
     margin-top: 35px;
-
 }
 
 
@@ -1379,22 +1216,19 @@ header {
 ================================================== */
 
 .cardapio {
-
     background: var(--creme);
 
     padding: 100px 10%;
-
 }
 
 .cardapio-inner {
-
     max-width: 1100px;
 
     margin: auto;
 
     padding: 60px 70px;
 
-    border: 1px solid rgba(29,58,47,.15);
+    border: 1px solid rgba(29, 58, 47, .15);
 
     display: flex;
 
@@ -1403,11 +1237,9 @@ header {
     justify-content: space-between;
 
     gap: 50px;
-
 }
 
 .cardapio h2 {
-
     font-family: 'DM Serif Display', serif;
 
     font-size: 55px;
@@ -1417,19 +1249,15 @@ header {
     color: var(--verde);
 
     font-weight: 400;
-
 }
 
 .cardapio h2 em {
-
     color: var(--dourado);
 
     font-style: italic;
-
 }
 
 .cardapio p {
-
     color: var(--cinza);
 
     font-size: 13px;
@@ -1439,7 +1267,6 @@ header {
     max-width: 450px;
 
     line-height: 1.8;
-
 }
 
 
@@ -1448,7 +1275,6 @@ header {
 ================================================== */
 
 .encomendas {
-
     position: relative;
 
     background: #EEEAE1;
@@ -1456,21 +1282,17 @@ header {
     padding: 140px 10%;
 
     overflow: hidden;
-
 }
 
 .encomendas-content {
-
     max-width: 1050px;
 
     margin: auto;
 
     text-align: center;
-
 }
 
 .encomendas h2 {
-
     color: var(--verde);
 
     font-family: 'DM Serif Display', serif;
@@ -1480,19 +1302,15 @@ header {
     font-size: clamp(50px, 6vw, 78px);
 
     line-height: .98;
-
 }
 
 .encomendas h2 em {
-
     color: var(--dourado);
 
     font-style: italic;
-
 }
 
 .encomendas-content > p {
-
     max-width: 600px;
 
     margin: 30px auto 50px;
@@ -1502,14 +1320,14 @@ header {
     font-size: 14px;
 
     line-height: 1.9;
-
 }
 
 
-/* CARDS DE CONTATO */
+/* ==================================================
+   CARDS DE CONTATO
+================================================== */
 
 .contact-options {
-
     display: grid;
 
     grid-template-columns: repeat(3, 1fr);
@@ -1517,11 +1335,9 @@ header {
     gap: 18px;
 
     text-align: left;
-
 }
 
 .contact-card {
-
     background: white;
 
     padding: 28px;
@@ -1532,24 +1348,20 @@ header {
 
     gap: 18px;
 
-    border: 1px solid rgba(29,58,47,.08);
+    border: 1px solid rgba(29, 58, 47, .08);
 
     transition: .35s ease;
-
 }
 
 .contact-card:hover {
-
     transform: translateY(-7px);
 
     box-shadow: var(--sombra);
 
     border-color: var(--dourado);
-
 }
 
 .contact-icon {
-
     width: 48px;
     height: 48px;
 
@@ -1560,6 +1372,7 @@ header {
     display: flex;
 
     align-items: center;
+
     justify-content: center;
 
     background: var(--verde);
@@ -1567,11 +1380,9 @@ header {
     color: var(--dourado);
 
     font-size: 22px;
-
 }
 
 .contact-card strong {
-
     display: block;
 
     color: var(--verde);
@@ -1581,11 +1392,9 @@ header {
     font-size: 17px;
 
     margin-bottom: 5px;
-
 }
 
 .contact-card span {
-
     color: var(--cinza-claro);
 
     font-size: 10px;
@@ -1593,42 +1402,36 @@ header {
     text-transform: uppercase;
 
     letter-spacing: 1px;
-
 }
 
 
-/* INFORMAÇÕES */
+/* ==================================================
+   INFORMAÇÕES
+================================================== */
 
 .order-info {
-
     margin-top: 70px;
 
     display: grid;
 
     grid-template-columns: repeat(2, 1fr);
 
-    border-top: 1px solid rgba(29,58,47,.12);
-
+    border-top: 1px solid rgba(29, 58, 47, .12);
 }
 
 .info-item {
-
     padding: 30px;
 
     text-align: left;
 
-    border-bottom: 1px solid rgba(29,58,47,.12);
-
+    border-bottom: 1px solid rgba(29, 58, 47, .12);
 }
 
 .info-item:nth-child(odd) {
-
-    border-right: 1px solid rgba(29,58,47,.12);
-
+    border-right: 1px solid rgba(29, 58, 47, .12);
 }
 
 .info-item span {
-
     display: block;
 
     color: var(--dourado);
@@ -1642,24 +1445,22 @@ header {
     font-weight: 600;
 
     margin-bottom: 12px;
-
 }
 
 .info-item p {
-
     color: var(--cinza);
 
     font-size: 12px;
 
     line-height: 1.8;
-
 }
 
 
-/* AVISO */
+/* ==================================================
+   AVISO
+================================================== */
 
 .pickup-note {
-
     margin-top: 35px;
 
     padding: 25px 30px;
@@ -1669,11 +1470,9 @@ header {
     color: white;
 
     text-align: left;
-
 }
 
 .pickup-note strong {
-
     display: block;
 
     color: var(--dourado);
@@ -1685,26 +1484,24 @@ header {
     letter-spacing: 2px;
 
     margin-bottom: 8px;
-
 }
 
 .pickup-note p {
-
-    color: rgba(255,255,255,.75);
+    color: rgba(255, 255, 255, .75);
 
     font-size: 12px;
 
     line-height: 1.8;
 
     margin-bottom: 5px;
-
 }
 
 
-/* INSTAGRAM */
+/* ==================================================
+   INSTAGRAM
+================================================== */
 
 .instagram-permission {
-
     margin-top: 25px;
 
     padding: 20px;
@@ -1722,13 +1519,10 @@ header {
     font-size: 11px;
 
     line-height: 1.7;
-
 }
 
 .instagram-permission span {
-
     font-size: 18px;
-
 }
 
 
@@ -1737,7 +1531,6 @@ header {
 ================================================== */
 
 footer {
-
     background: var(--verde-escuro);
 
     color: white;
@@ -1745,31 +1538,25 @@ footer {
     text-align: center;
 
     padding: 55px 20px;
-
 }
 
 .footer-logo {
-
     color: var(--dourado);
 
     font-family: 'DM Serif Display', serif;
 
     font-size: 38px;
-
 }
 
 footer p {
-
-    color: rgba(255,255,255,.5);
+    color: rgba(255, 255, 255, .5);
 
     font-size: 11px;
 
     margin-top: 8px;
-
 }
 
 .footer-line {
-
     width: 60px;
 
     height: 1px;
@@ -1777,17 +1564,14 @@ footer p {
     background: var(--dourado);
 
     margin: 25px auto;
-
 }
 
 footer small {
-
-    color: rgba(255,255,255,.35);
+    color: rgba(255, 255, 255, .35);
 
     font-size: 9px;
 
     letter-spacing: 1px;
-
 }
 
 
@@ -1796,49 +1580,30 @@ footer small {
 ================================================== */
 
 @keyframes heroText {
-
     from {
-
         opacity: 0;
-
         transform: translateY(30px);
-
     }
 
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
-
 }
-
 
 @keyframes heroImage {
-
     from {
-
         opacity: 0;
-
         transform: translateX(40px);
-
     }
 
     to {
-
         opacity: 1;
-
         transform: translateX(0);
-
     }
-
 }
 
-
 @keyframes blink {
-
     0%, 45% {
         opacity: 1;
     }
@@ -1846,12 +1611,9 @@ footer small {
     46%, 100% {
         opacity: 0;
     }
-
 }
 
-
 @keyframes scrollDown {
-
     0%, 100% {
         transform: translateY(0);
     }
@@ -1859,7 +1621,6 @@ footer small {
     50% {
         transform: translateY(6px);
     }
-
 }
 
 
@@ -1868,7 +1629,6 @@ footer small {
 ================================================== */
 
 .reveal {
-
     opacity: 0;
 
     transform: translateY(35px);
@@ -1876,15 +1636,12 @@ footer small {
     transition:
         opacity .8s ease,
         transform .8s ease;
-
 }
 
 .reveal.visible {
-
     opacity: 1;
 
     transform: translateY(0);
-
 }
 
 
@@ -1894,47 +1651,31 @@ footer small {
 
 @media (max-width: 1000px) {
 
-
     .navbar {
         padding: 12px 5%;
     }
-
 
     .nav-links {
         gap: 20px;
     }
 
-
     .hero {
-
         padding-left: 7%;
         padding-right: 7%;
-
         gap: 30px;
-
     }
-
 
     .sobre-container {
-
         gap: 60px;
-
     }
-
 
     .criacao-header {
-
         gap: 50px;
-
     }
-
 
     .carousel-item {
-
         flex-basis: calc(50% - 10px);
-
     }
-
 }
 
 
@@ -1942,60 +1683,115 @@ footer small {
    MOBILE
 ================================================== */
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
+
+    /* ==============================
+       NAVBAR MOBILE
+    ============================== */
+
+    .navbar {
+        min-height: 75px;
+
+        padding: 12px 6%;
+
+        justify-content: flex-end;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
 
     .nav-links {
-        background-color: #e4a217;
         position: fixed;
 
-        left: 0;
         top: 0;
+        left: 0;
 
         width: 100%;
         height: 100vh;
 
-        transform: translateY(-20px);
+        background: var(--verde);
 
         display: flex;
+
         flex-direction: column;
 
         justify-content: center;
+
         align-items: center;
 
-        gap: 30px;
+        gap: 28px;
 
         opacity: 0;
+
         visibility: hidden;
+
+        pointer-events: none;
+
+        transform: translateY(-20px);
+
+        transition:
+            opacity .35s ease,
+            visibility .35s ease,
+            transform .35s ease;
+
+        z-index: 1050;
     }
 
     .nav-links.active {
-        transform: translateY(0);
-
         opacity: 1;
+
         visibility: visible;
+
+        pointer-events: auto;
+
+        transform: translateY(0);
     }
 
-}
+    .nav-links a {
+        color: white;
 
+        font-family: 'Playfair Display', serif;
+
+        font-size: 25px;
+
+        letter-spacing: .5px;
+    }
+
+    .nav-links a::after {
+        bottom: -8px;
+    }
+
+    .nav-links a:hover {
+        color: var(--dourado);
+    }
+
+    /*
+       O botão precisa ficar ACIMA
+       do menu aberto.
+    */
 
     .menu-toggle {
+        z-index: 1200;
 
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #e4a217;
+        background: transparent;
 
+        color: white;
+    }
+
+    .menu-toggle:hover {
+        background: var(--dourado);
     }
 
 
-    /* HERO */
+    /* ==============================
+       HERO
+    ============================== */
 
     .hero {
-
         min-height: auto;
 
         padding:
-
             125px
             7%
             100px;
@@ -2007,323 +1803,249 @@ footer small {
         text-align: center;
 
         gap: 60px;
-
     }
-
 
     .hero-content {
-
         width: 100%;
-
     }
 
-
     .hero h1 {
-
         font-size: 70px;
 
         letter-spacing: -2px;
-
     }
-
 
     .artist-name {
-
         justify-content: center;
-
     }
 
-
     .hero-content > p {
-
         margin-left: auto;
+
         margin-right: auto;
 
         font-size: 13px;
-
     }
 
-
     .hero-image {
-
         width: 85%;
 
         max-width: 360px;
-
     }
-
 
     .hero-photo-frame {
-
         max-height: none;
-
     }
-
 
     .hero-photo-decoration {
-
         right: -25px;
-
     }
-
 
     .hero-scroll {
-
         display: none;
-
     }
 
 
-    /* SEÇÕES */
+    /* ==============================
+       SEÇÕES
+    ============================== */
 
     .section-number {
-
         left: 7%;
 
         top: 55px;
-
     }
 
 
-    /* SOBRE */
+    /* ==============================
+       SOBRE
+    ============================== */
 
     .sobre {
-
         padding:
-
             110px
             7%
             90px;
-
     }
-
 
     .sobre-container {
-
         display: block;
-
     }
-
 
     .sobre-heading {
-
         margin-bottom: 60px;
-
     }
-
 
     .sobre-heading h2 {
-
         font-size: 50px;
-
     }
 
-
     .sobre-continuacao {
-
         display: block;
 
         margin-top: 80px;
 
         padding-top: 60px;
-
     }
-
 
     .continuacao-text {
-
         margin-bottom: 50px;
-
     }
 
-
     .paixao {
-
         min-height: 300px;
 
         padding: 40px;
-
     }
-
 
     .paixao strong {
-
         font-size: 36px;
-
     }
 
 
-    /* MANIFESTO */
+    /* ==============================
+       MANIFESTO
+    ============================== */
 
     .manifesto {
-
         min-height: 55vh;
 
         padding: 80px 7%;
-
     }
-
 
     .manifesto h2 {
-
         font-size: 52px;
+    }
 
+    .onca-manifesto {
+        width: 240px;
+        height: 240px;
+
+        right: -30px;
+        bottom: -20px;
     }
 
 
-    /* CRIAÇÕES */
+    /* ==============================
+       CRIAÇÕES
+    ============================== */
 
     .criacao {
-
         padding:
-
             110px
             5%
             90px;
-
     }
 
-
     .criacao-header {
-
         display: block;
 
         margin-bottom: 45px;
-
     }
 
-
     .criacao-header h2 {
-
         font-size: 60px;
 
         margin-bottom: 30px;
-
     }
-
 
     .carousel-wrapper {
-
         gap: 8px;
-
     }
 
+    .carousel {
+        min-width: 0;
+    }
 
     .carousel-item {
-
-        flex-basis: 100%;
-
+        flex: 0 0 100%;
     }
 
-
     .carousel-btn {
-
         width: 40px;
         height: 40px;
 
         font-size: 17px;
 
+        flex-shrink: 0;
+    }
+
+    .carousel-counter {
+        margin-top: 25px;
     }
 
 
-    /* ARTE */
+    /* ==============================
+       ARTE
+    ============================== */
 
     .arte {
-
         min-height: 80vh;
 
         padding: 100px 8%;
-
     }
-
 
     .arte h2 {
-
         font-size: 58px;
-
     }
 
 
-    /* CARDÁPIO */
+    /* ==============================
+       CARDÁPIO
+    ============================== */
 
     .cardapio {
-
         padding: 70px 7%;
-
     }
 
-
     .cardapio-inner {
-
         padding: 40px 30px;
 
         display: block;
-
     }
-
 
     .cardapio h2 {
-
         font-size: 48px;
-
     }
-
 
     .cardapio .btn {
-
         margin-top: 30px;
-
     }
 
 
-    /* ENCOMENDAS */
+    /* ==============================
+       ENCOMENDAS
+    ============================== */
 
     .encomendas {
-
         padding:
-
             110px
             7%
             80px;
-
     }
-
 
     .encomendas h2 {
-
         font-size: 52px;
-
     }
-
 
     .contact-options {
-
         grid-template-columns: 1fr;
-
     }
-
 
     .order-info {
-
         grid-template-columns: 1fr;
-
     }
-
 
     .info-item:nth-child(odd) {
-
         border-right: none;
-
     }
 
-
     .instagram-permission {
-
         align-items: flex-start;
 
         text-align: left;
-
     }
+}
 
 
 /* ==================================================
@@ -2332,60 +2054,61 @@ footer small {
 
 @media (max-width: 420px) {
 
+    .navbar {
+        min-height: 70px;
+    }
+
+    .menu-toggle {
+        width: 42px;
+        height: 42px;
+
+        font-size: 20px;
+    }
 
     .hero h1 {
-
         font-size: 60px;
-
     }
-
 
     .hero-image {
-
         width: 90%;
-
     }
-
 
     .sobre-heading h2 {
-
         font-size: 43px;
-
     }
-
 
     .manifesto h2 {
-
         font-size: 45px;
-
     }
-
 
     .criacao-header h2 {
-
         font-size: 53px;
-
     }
-
 
     .arte h2 {
-
         font-size: 49px;
-
     }
-
 
     .encomendas h2 {
-
         font-size: 45px;
-
     }
-
 
     .paixao strong {
-
         font-size: 31px;
-
     }
 
+    .nav-links a {
+        font-size: 22px;
+    }
+
+    .carousel-wrapper {
+        gap: 5px;
+    }
+
+    .carousel-btn {
+        width: 36px;
+        height: 36px;
+
+        font-size: 15px;
+    }
 }
