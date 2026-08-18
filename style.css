@@ -1980,9 +1980,9 @@ footer small {
     .menu-toggle {
 
         display: flex;
-
         align-items: center;
         justify-content: center;
+        background-color: #e4a217;
 
     }
 
