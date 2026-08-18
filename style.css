@@ -1942,11 +1942,6 @@ footer small {
    MOBILE
 ================================================== */
 
-@media (max-width: 768px) {
-
-
-    /* NAV */
-
   @media (max-width: 768px) {
 
     .nav-links {
@@ -2328,9 +2323,6 @@ footer small {
         text-align: left;
 
     }
-
-
-}
 
 
 /* ==================================================

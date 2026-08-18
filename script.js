@@ -1,4 +1,10 @@
 /* ==================================================
+   DOCE ARTE — SCRIPT.JS
+   Julia Berta
+================================================== */
+
+
+/* ==================================================
    EFEITO DE DIGITAÇÃO — JULIA BERTA
 ================================================== */
 
@@ -25,6 +31,7 @@ if (typingElement) {
     }
 
     typeWriter();
+
 }
 
 
@@ -43,7 +50,12 @@ if (menuToggle && navLinks) {
 
         menuToggle.setAttribute(
             'aria-expanded',
-            isOpen
+            String(isOpen)
+        );
+
+        menuToggle.setAttribute(
+            'aria-label',
+            isOpen ? 'Fechar menu' : 'Abrir menu'
         );
 
         document.body.classList.toggle(
@@ -51,8 +63,23 @@ if (menuToggle && navLinks) {
             isOpen
         );
 
+        /*
+            Troca o ícone do botão:
+            ☰ = fechado
+            ×  = aberto
+        */
+
+        menuToggle.textContent = isOpen
+            ? '×'
+            : '☰';
+
     });
 
+
+    /*
+        Fecha o menu quando
+        clicar em algum link
+    */
 
     navLinks.querySelectorAll('a').forEach(link => {
 
@@ -65,11 +92,52 @@ if (menuToggle && navLinks) {
                 'false'
             );
 
+            menuToggle.setAttribute(
+                'aria-label',
+                'Abrir menu'
+            );
+
             document.body.classList.remove(
                 'menu-open'
             );
 
+            menuToggle.textContent = '☰';
+
         });
+
+    });
+
+
+    /*
+        Fecha o menu ao apertar ESC
+    */
+
+    document.addEventListener('keydown', event => {
+
+        if (
+            event.key === 'Escape' &&
+            navLinks.classList.contains('active')
+        ) {
+
+            navLinks.classList.remove('active');
+
+            menuToggle.setAttribute(
+                'aria-expanded',
+                'false'
+            );
+
+            menuToggle.setAttribute(
+                'aria-label',
+                'Abrir menu'
+            );
+
+            document.body.classList.remove(
+                'menu-open'
+            );
+
+            menuToggle.textContent = '☰';
+
+        }
 
     });
 
@@ -77,21 +145,28 @@ if (menuToggle && navLinks) {
 
 
 /* ==================================================
-   CARROSSEL
+   CARROSSEL — MINHAS CRIAÇÕES
 ================================================== */
 
-const track = document.querySelector('.carousel-track');
-const items = document.querySelectorAll('.carousel-item');
+const track =
+    document.querySelector('.carousel-track');
 
-const prevButton = document.querySelector('.carousel-btn.prev');
-const nextButton = document.querySelector('.carousel-btn.next');
+const items =
+    document.querySelectorAll('.carousel-item');
 
-const currentSlide = document.getElementById('current-slide');
+const prevButton =
+    document.querySelector('.carousel-btn.prev');
+
+const nextButton =
+    document.querySelector('.carousel-btn.next');
+
+const currentSlide =
+    document.getElementById('current-slide');
 
 
 if (
     track &&
-    items.length &&
+    items.length > 0 &&
     prevButton &&
     nextButton
 ) {
@@ -99,14 +174,23 @@ if (
     let currentIndex = 0;
 
 
+    /*
+        Quantidade de imagens
+        visíveis por tela
+    */
+
     function getVisibleItems() {
 
         if (window.innerWidth <= 768) {
+
             return 1;
+
         }
 
         if (window.innerWidth <= 1000) {
+
             return 2;
+
         }
 
         return 3;
@@ -114,54 +198,116 @@ if (
     }
 
 
+    /*
+        Atualiza o carrossel
+    */
+
     function updateCarousel() {
 
-        const visibleItems = getVisibleItems();
+        const visibleItems =
+            getVisibleItems();
+
+
+        /*
+            Espaçamento entre imagens
+        */
 
         const gap = 20;
 
+
+        /*
+            Largura real da imagem
+        */
+
         const itemWidth =
-            items[0].getBoundingClientRect().width + gap;
+            items[0].getBoundingClientRect().width;
+
+
+        /*
+            Movimento total
+        */
+
+        const moveAmount =
+            itemWidth + gap;
+
 
         track.style.transform =
-            `translateX(-${currentIndex * itemWidth}px)`;
+            `translateX(-${currentIndex * moveAmount}px)`;
 
+
+        /*
+            Atualiza contador
+        */
 
         if (currentSlide) {
 
             currentSlide.textContent =
-                String(currentIndex + 1).padStart(2, '0');
+                String(currentIndex + 1)
+                    .padStart(2, '0');
 
         }
 
 
-        prevButton.disabled =
-            currentIndex === 0;
-
+        /*
+            Limite máximo
+        */
 
         const maxIndex =
-            items.length - visibleItems;
+            Math.max(
+                0,
+                items.length - visibleItems
+            );
 
+
+        /*
+            Botão anterior
+        */
+
+        prevButton.disabled =
+            currentIndex <= 0;
+
+
+        /*
+            Botão próximo
+        */
 
         nextButton.disabled =
             currentIndex >= maxIndex;
 
 
+        /*
+            Aparência dos botões
+        */
+
         prevButton.style.opacity =
-            currentIndex === 0 ? '.35' : '1';
+            currentIndex <= 0
+                ? '.35'
+                : '1';
+
 
         nextButton.style.opacity =
-            currentIndex >= maxIndex ? '.35' : '1';
+            currentIndex >= maxIndex
+                ? '.35'
+                : '1';
 
     }
 
 
+    /* ==================================================
+       PRÓXIMA IMAGEM
+    ================================================== */
+
     nextButton.addEventListener('click', () => {
 
-        const visibleItems = getVisibleItems();
+        const visibleItems =
+            getVisibleItems();
+
 
         const maxIndex =
-            items.length - visibleItems;
+            Math.max(
+                0,
+                items.length - visibleItems
+            );
 
 
         if (currentIndex < maxIndex) {
@@ -174,6 +320,10 @@ if (
 
     });
 
+
+    /* ==================================================
+       IMAGEM ANTERIOR
+    ================================================== */
 
     prevButton.addEventListener('click', () => {
 
@@ -188,11 +338,47 @@ if (
     });
 
 
+    /* ==================================================
+       REDIMENSIONAMENTO
+    ================================================== */
+
     window.addEventListener(
         'resize',
-        updateCarousel
+        () => {
+
+            const visibleItems =
+                getVisibleItems();
+
+
+            const maxIndex =
+                Math.max(
+                    0,
+                    items.length - visibleItems
+                );
+
+
+            /*
+                Evita ficar em uma posição
+                que não existe ao mudar
+                de desktop para celular
+            */
+
+            if (currentIndex > maxIndex) {
+
+                currentIndex = maxIndex;
+
+            }
+
+
+            updateCarousel();
+
+        }
     );
 
+
+    /*
+        Inicializa o carrossel
+    */
 
     updateCarousel();
 
@@ -200,14 +386,14 @@ if (
 
 
 /* ==================================================
-   REVEAL AO ROLAR
+   REVEAL — ANIMAÇÕES AO ROLAR
 ================================================== */
 
 const revealElements =
     document.querySelectorAll('.reveal');
 
 
-if (revealElements.length) {
+if (revealElements.length > 0) {
 
     const observer =
         new IntersectionObserver(
@@ -243,3 +429,49 @@ if (revealElements.length) {
     });
 
 }
+
+
+/* ==================================================
+   FECHAR MENU AO REDIMENSIONAR
+================================================== */
+
+window.addEventListener('resize', () => {
+
+    /*
+        Se voltar para desktop,
+        garante que o menu mobile
+        não fique preso aberto.
+    */
+
+    if (
+        window.innerWidth > 768 &&
+        navLinks &&
+        menuToggle
+    ) {
+
+        navLinks.classList.remove('active');
+
+        menuToggle.setAttribute(
+            'aria-expanded',
+            'false'
+        );
+
+        menuToggle.setAttribute(
+            'aria-label',
+            'Abrir menu'
+        );
+
+        menuToggle.textContent = '☰';
+
+        document.body.classList.remove(
+            'menu-open'
+        );
+
+    }
+
+});
+
+
+/* ==================================================
+   FIM
+================================================== */
