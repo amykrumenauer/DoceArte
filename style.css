@@ -1945,6 +1945,7 @@ footer small {
   @media (max-width: 768px) {
 
     .nav-links {
+        background-color: #e4a217;
         position: fixed;
 
         left: 0;
